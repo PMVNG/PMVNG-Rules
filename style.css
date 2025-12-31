@@ -296,6 +296,125 @@ img {
     height: 28px;
 }
 
+/* ===== Announcement Section ===== */
+.announcement-section {
+    padding: 40px 0;
+    background: linear-gradient(135deg, rgba(255, 85, 85, 0.08) 0%, rgba(170, 0, 0, 0.05) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.announcement-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 32px;
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 85, 85, 0.2);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.announcement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+}
+
+.announcement-icon {
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.announcement-icon svg {
+    width: 28px;
+    height: 28px;
+    color: white;
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 85, 85, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(255, 85, 85, 0.5);
+    }
+}
+
+.announcement-content {
+    flex: 1;
+}
+
+.announcement-date {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--primary-light);
+    border-radius: var(--radius-xl);
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 12px;
+}
+
+.announcement-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.announcement-content p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.announcement-content p strong {
+    color: var(--text-primary);
+}
+
+.announcement-content p em {
+    color: var(--text-muted);
+}
+
+.announcement-slogan {
+    font-weight: 500;
+    color: var(--text-primary) !important;
+}
+
+@media (max-width: 768px) {
+    .announcement-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+    
+    .announcement-card::before {
+        width: 100%;
+        height: 4px;
+    }
+    
+    .announcement-icon {
+        margin: 0 auto;
+    }
+}
+
 /* ===== Sections ===== */
 .section {
     padding: 100px 0;
