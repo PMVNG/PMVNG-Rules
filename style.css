@@ -1075,6 +1075,8 @@ img {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    list-style: none;
+    padding-left: 0;
 }
 
 .disclaimer-card li {
